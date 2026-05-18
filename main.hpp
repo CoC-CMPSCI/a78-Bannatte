@@ -19,8 +19,8 @@ int findcross(int M[][10])
 
     int count = 0;
     for (int i = 1; i < 9; i++) {
-        for (j = 1; j < 9; j++) {
-            check = ((M[i][j] == 1) && (M[i - 1][j] == 1) && (M[i + 1][j] == 1) && (M[i][j - 1] == 1) && (M[i][j + 1] == 1));
+        for (int j = 1; j < 9; j++) {
+            bool check = ((M[i][j] == 1) && (M[i - 1][j] == 1) && (M[i + 1][j] == 1) && (M[i][j - 1] == 1) && (M[i][j + 1] == 1));
             if (check) {
                 count++;
             }
