@@ -16,6 +16,17 @@ int findcross(int M[][10])
 {
     // TODO: scan every cell. If M[i][j]==1 and all four orthogonal neighbors
     //       are also 1, count it as a cross. Return the total count.
+
+    int count = 0;
+    for (int i = 1; i < 9; i++) {
+        for (j = 1; j < 9; j++) {
+            check = ((M[i][j] == 1) && (M[i - 1][j] == 1) && (M[i + 1][j] == 1) && (M[i][j - 1] == 1) && (M[i][j + 1] == 1));
+            if (check) {
+                count++;
+            }
+        }
+    }
+    return count;
 }
 
 void printout(int M[][10], int cnt)
